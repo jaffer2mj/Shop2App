@@ -12,10 +12,11 @@ import retrofit2.Callback
 import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
     val page = 1;
-    val access_token = "c32313df0d0ef512ca64d5b336a0d7c6"
+    val access_token = "dbd13cc84892fa9cf869b16dd5789b7b"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,7 +30,7 @@ class MainActivity : AppCompatActivity() {
         val client = OkHttpClient.Builder().addInterceptor(interceptor).build()
 
         val retrofit = Retrofit.Builder()
-            .baseUrl("https://shopicruit.myshopify.com")
+            .baseUrl("https://collectiveoutlet.myshopify.com")
             .client(client)
             .addConverterFactory(GsonConverterFactory.create())
             .build()
